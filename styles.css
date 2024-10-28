@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Times;
+    font-family: "Nova Square", sans-serif;
 }
 
 .navbar {
@@ -30,7 +30,7 @@
 
 #navbar__logo {
     background-color: blue;
-    background-image: linear-gradient(to top, blue 0%, red 100%);
+    background-image: linear-gradient(to top, blue 0%, rgb(120, 118, 255) 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -88,7 +88,7 @@ fa-gem {
     border: none;
     outline: none;
     border-radius: 30px;
-    background: red;
+    background: rgb(120, 118, 255);
     color: white;
 }
 
@@ -457,12 +457,20 @@ color: white;
     color: midnightblue;
 }
 
-.photo_grid_container {
+.main_photo_container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.photo_column {
     display: flex;
+    flex: 33%;
     flex-wrap: wrap;
     background-color: white;
     flex-direction: column;
-    width: 33%;
+    max-width: 33%;
+
 }
 
 .trip_photo {
@@ -489,7 +497,7 @@ color: white;
     }
     img {
         opacity: .2;
-    transform: scale(1.0);
+    transform: scale(1.01);
     transition-duration: .1s;
     }
     
@@ -498,4 +506,11 @@ color: white;
 .trip_photo img {
     height: auto;
     width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .photo_column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
