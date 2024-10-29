@@ -2,19 +2,27 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Nova Square", sans-serif;
+    font-family: "Mulish", sans-serif;
+    
 }
 
+
+
 .navbar {
-    background: black;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    top: 0;
+    position:relative;
+    background-image: url(/images/nz1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
     position: sticky;
     top: 0;
-    z-index: 999;
+    left: 0;
+    z-index: 100;
 }
 
 .navbar__container {
@@ -23,7 +31,6 @@
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
     margin: 0 auto;
     padding: 0 50;
 }
@@ -41,11 +48,10 @@
     cursor: pointer;
     text-decoration: none;
     font-size: 2rem;
+    padding-left: 50px;
 }
 
-fa-gem {
-    margin-right: .5rem;
-}
+
 
 .navbar__menu {
     display: flex;
@@ -97,7 +103,7 @@ fa-gem {
     transition: all .5s ease;
 }
 .navbar__links:hover {
-    background: skyblue;
+    background: rgb(62, 108, 126);
     transition: all .5s ease;
 }
 
@@ -199,55 +205,53 @@ fa-gem {
   /* Main content on home page*/
 
   .main {
-    background-color: #141414;
+    background-color: transparent;
+    background-image: url(/images/nz1.jpg);
+    background-size: cover;
+    background-position: top left;
+    background-attachment: fixed;
   }
   
   .main__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    /*grid-template-columns: 1fr 1fr; */
     align-items: center;
     justify-self: center;
-    margin: 0 auto;
-    height: 88vh;
-    background-color: hsl(0, 33%, 9%);
+    margin: auto auto;
+    height: 90vh;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 0px;
+    padding-bottom: 35vh;
+    text-align: center;
   }
   
 
 .main__content {
     color: #fff;
     width: 100%;
+    align-items: center;
   }
   
   .main__content h1 {
     font-size: 3rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    /*background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
   }
   
   .main__content h2 {
     font-size: 3rem;
     margin-top: 10px;
-    background-color: #ff8177;
-    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    
   }
   
   .main__content p {
-    color: goldenrod;
+    color: white;
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: 700;
@@ -293,9 +297,11 @@ fa-gem {
   }
 
 #main__img {
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: auto;
     padding: 10%;
+    opacity: 1;
+    
   }
 
   /* on to the services section, pics with links over top*/
@@ -392,8 +398,9 @@ fa-gem {
     }
 
 .footer__container {
-    background-color: midnightblue;
-    padding: 5rem 0;
+    background-color: rgba(137, 207, 235);
+    opacity: 1;
+    padding: 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -410,6 +417,7 @@ fa-gem {
 
 .footer__link--wrapper {
     display: flex;
+    opacity: 1;
 }
 
 .footer__link--items {
@@ -421,6 +429,7 @@ fa-gem {
     width: 300px;
     height: auto;
     box-sizing: border-box;
+    font-size: .8rem;
   }
   
 .footer__link--items h2 {
@@ -452,7 +461,7 @@ color: white;
 /* Photo Gallery*/
 
 .photo_gallery_title {
-    background-image: linear-gradient(black 0%, white 100%);
+    background-image: white;
     padding-top: 10px;
     color: midnightblue;
 }
@@ -461,15 +470,17 @@ color: white;
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
+  background-image: linear-gradient(white 0%, skyblue 100%);
 }
 
 .photo_column {
     display: flex;
     flex: 33%;
     flex-wrap: wrap;
-    background-color: white;
+    background-color: transparent;
     flex-direction: column;
     max-width: 33%;
+    padding-top: 5px;
 
 }
 
@@ -504,6 +515,7 @@ color: white;
 }
 
 .trip_photo img {
+  
     height: auto;
     width: 100%;
 }
